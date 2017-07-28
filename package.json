@@ -11,9 +11,9 @@
     "name": "Matt Magoffin",
     "email": "matt@solarnetwork.net"
   },
-  "main": "lib/solarnetwork-test-utils-js.js",
-  "module": "lib/solarnetwork-test-utils-js.es.js",
-  "jsnext:main": "lib/solarnetwork-test-utils-js.es.js",
+  "main": "lib/solarnetwork-test-utils.js",
+  "module": "lib/solarnetwork-test-utils.es.js",
+  "jsnext:main": "lib/solarnetwork-test-utils.es.js",
   "files": [
     "lib.js",
     "lib",
@@ -40,8 +40,8 @@
   "scripts": {
     "apidoc": "jsdoc --configure jsdoc.config.json --template ./node_modules/ink-docstrap/template --package package.json --recurse --destination docs/api src",
     "prebuild": "eslint lib.js src",
-    "build": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -c -f umd -n sn -m -o lib/solarnetwork-test-utils-js.js -- lib.js && rollup --banner \"$(preamble)\" -c -f es -m -o lib/solarnetwork-test-utils-js.es.js -- lib.js",
-    "postbuild": "./node_modules/uglify-es/bin/uglifyjs --preamble \"$(preamble)\" lib/solarnetwork-test-utils-js.js --source-map content=lib/solarnetwork-test-utils-js.js.map,filename=lib/solarnetwork-test-utils-js.min.js.map -c -m -o lib/solarnetwork-test-utils-js.min.js && ./node_modules/uglify-es/bin/uglifyjs --preamble \"$(preamble)\" lib/solarnetwork-test-utils-js.es.js --source-map content=lib/solarnetwork-test-utils-js.es.js.map,filename=lib/solarnetwork-test-utils-js.es.min.js.map -c -m -o lib/solarnetwork-test-utils-js.es.min.js",
+    "build": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -c -f umd -n sn -m -o lib/solarnetwork-test-utils.js -- lib.js && rollup --banner \"$(preamble)\" -c -f es -m -o lib/solarnetwork-test-utils.es.js -- lib.js",
+    "postbuild": "./node_modules/uglify-es/bin/uglifyjs --preamble \"$(preamble)\" lib/solarnetwork-test-utils.js --source-map content=lib/solarnetwork-test-utils.js.map,filename=lib/solarnetwork-test-utils.min.js.map -c -m -o lib/solarnetwork-test-utils.min.js && ./node_modules/uglify-es/bin/uglifyjs --preamble \"$(preamble)\" lib/solarnetwork-test-utils.es.js --source-map content=lib/solarnetwork-test-utils.es.js.map,filename=lib/solarnetwork-test-utils.es.min.js.map -c -m -o lib/solarnetwork-test-utils.es.min.js",
     "test": "ava",
     "coverage": "nyc --reporter=html ./node_modules/.bin/ava",
     "release": "generate-release --current-version \"$(bin/remove-preid)\""
