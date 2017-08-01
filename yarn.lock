@@ -505,10 +505,6 @@ babel-plugin-external-helpers@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-rewire@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-rewire/-/babel-plugin-rewire-1.1.0.tgz#a6b966d9d8c06c03d95dcda2eec4e2521519549b"
-
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -1248,10 +1244,6 @@ d3-dsv@1:
     commander "2"
     iconv-lite "0.4"
     rw "1"
-
-d3-queue@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/d3-queue/-/d3-queue-3.0.7.tgz#c93a2e54b417c0959129d7d73f6cf7d4292e7618"
 
 d3-request@^1.0.5:
   version "1.0.5"
@@ -3745,9 +3737,9 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
-solarnetwork-api-core@SolarNetwork/sn-api-core-js#develop:
-  version "0.5.3-dev.0"
-  resolved "https://codeload.github.com/SolarNetwork/sn-api-core-js/tar.gz/ce04411c7891121743459e61703a05978f116edb"
+solarnetwork-api-core@0.6:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/solarnetwork-api-core/-/solarnetwork-api-core-0.6.0.tgz#49a0a65aaf6050785346ed1bb15016aab6c50138"
   dependencies:
     crypto-js "^3.1.9-1"
     d3-time-format "^2.0.5"

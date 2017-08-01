@@ -1,7 +1,7 @@
 {
-  "name": "sn-test-utils",
+  "name": "solarnetwork-test-utils",
   "version": "0.0.1-dev.0",
-  "description": "SolarNetwork Control Toggler",
+  "description": "SolarNetwork Test Utils",
   "keywords": [
     "solarnetwork"
   ],
@@ -90,6 +90,6 @@
   },
   "dependencies": {
     "d3-request": "^1.0.5",
-    "solarnetwork-api-core": "SolarNetwork/sn-api-core-js#develop"
+    "solarnetwork-api-core": "0.6"
   }
 }
