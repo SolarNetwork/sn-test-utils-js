@@ -61,7 +61,15 @@ function mock(XMLHttpRequest) {
             handlers.push(cb);
             return self;
         };
-        
+
+        self.header = (name, value) => {
+            name = (name + "").toLowerCase();
+            if (value === undefined) return headers.get(name);
+            if (value == null) headers.remove(name);
+            else headers.set(name, value + "");
+            return self;
+        };
+
         self.mimeType = (type) => {
             headers.set('Accept', type);
             return self;
