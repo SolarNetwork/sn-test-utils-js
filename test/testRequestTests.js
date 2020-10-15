@@ -74,3 +74,24 @@ test.cb('json:get', t => {
     t.is(requests.length, 1);
     requests[0].respond(200, { "Content-Type": "application/json" }, '{"success":true}');
 });
+
+test.cb('request:send:undefined', t => {
+    const xhr = sinon.useFakeXMLHttpRequest();
+    const tr = testRequest(xhr);
+    const requests = [];
+    xhr.onCreate = (req) => requests.push(req);
+
+    var req = tr.request('http://localhost/foo')
+        .mimeType("application/json")
+        .on('load', (xhr) => {
+            t.is(xhr.responseText, '');
+            t.end();
+        }).on('error', (err) => {
+            t.fail(err);
+            t.end();
+        });
+    req.send('GET');
+
+    t.is(requests.length, 1);
+    requests[0].respond(200);
+});

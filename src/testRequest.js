@@ -40,7 +40,7 @@ function mock(XMLHttpRequest) {
                     try {
                         result = response.call(self, xhr);
                     } catch (e) {
-                        event.call("error", request, e);
+                        callEvent("error", request, e);
                         return;
                     }
                 } else {
