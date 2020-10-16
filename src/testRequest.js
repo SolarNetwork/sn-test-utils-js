@@ -115,7 +115,14 @@ function mock(XMLHttpRequest) {
     };
 
     var json = type("application/json", function(xhr) {
-        return xhr && xhr.responseText ? JSON.parse(xhr.responseText) : undefined;
+        if ( xhr && xhr.responseText ) {
+            try {
+                return JSON.parse(xhr.responseText);
+            } catch (e) {
+                throw new Error('Error parsing JSON response to ' +xhr.url +': ' +e.message);
+            }
+        }
+        return undefined;
     });
 
     return {
