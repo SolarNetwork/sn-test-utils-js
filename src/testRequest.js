@@ -115,7 +115,7 @@ function mock(XMLHttpRequest) {
     };
 
     var json = type("application/json", function(xhr) {
-        return JSON.parse(xhr.responseText);
+        return xhr && xhr.responseText ? JSON.parse(xhr.responseText) : undefined;
     });
 
     return {
