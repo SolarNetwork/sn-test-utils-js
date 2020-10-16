@@ -10,7 +10,7 @@ class TestAuthorizationV2Builder extends AuthorizationV2Builder {
      *
      * <p>This date will be used even when the `date()` function is called.
      * 
-     * @type {Date} the fixed date to use
+     * @type {Date}
      */
     get fixedDate() {
         return this._fixedDate;
