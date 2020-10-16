@@ -72,7 +72,7 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.24.1",
-    "eslint": "3",
+    "eslint": "4",
     "generate-release": "^0.13.0",
     "global-object": "^1.0.0",
     "ink-docstrap": "^1.3.0",
